@@ -1,0 +1,68 @@
+<div id="account-profile">
+	{#MODAL FORMS#}
+	{{ form_profile }}
+	{{ form_authorization }}
+	{#MODAL FORMS#}
+	<div class="row">
+		<div class="col-md-12">
+			<div class="form-group">
+				<div class="pull-right">
+					{{ account_active_status_button }}
+					<a class="btn btn-default btn-sm bs-modal-link {{ account_metadata_authorization }}" title="Change" href="#">
+						Role
+					</a>
+					<a class="btn btn-default btn-sm bs-modal-link {{ account_metadata_reset_password }}" title="Change" href="#">
+						Reset password
+					</a>
+					<a class="btn btn-primary btn-sm bs-modal-link {{ account_metadata_update }}" title="Change" href="#">
+						Edit
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="indent"></div>
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table table-striped">
+				<tr>
+					<td>Surname</td>
+					<td><strong>{{ account_surname }}</strong></td>
+				</tr>
+				<tr>
+					<td>Name</td>
+					<td><strong>{{ account_name }}</strong></td>
+				</tr>
+				<tr>
+					<td>Patronymic</td>
+					<td><strong>{{ account_patronymic }}</strong></td>
+				</tr>
+				<tr>
+					<td>Active</td>
+					<td><strong>{{ authentication_active }}</strong></td>
+				</tr>
+				<tr>
+					<td>Type</td>
+					<td><strong>{{ account_type_name }}</strong></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><strong>{{ authentication_email }}</strong></td>
+				</tr>
+				<tr>
+					<td>Role</td>
+					<td><strong>{{ authorization_name }}</strong></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="form-group">
+				<a class="btn btn-default btn-sm pull-right" title="Change" href="{{ back_url }}">
+					Back
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,24 @@
+
+implement different responses on json and http requests
+http -> xml
+json -> json
+
+---
+
+implement default controller behaviour
+
+With the above minimal amount of effort, you have already finished your task of creating the RESTful APIs for accessing the user data. The APIs you have created include:
+
+GET /users: list all users page by page;
+HEAD /users: show the overview information of user listing;
+POST /users: create a new user;
+GET /users/123: return the details of the user 123;
+HEAD /users/123: show the overview information of user 123;
+PATCH /users/123 and PUT /users/123: update the user 123;
+DELETE /users/123: delete the user 123;
+OPTIONS /users: show the supported verbs regarding endpoint /users;
+OPTIONS /users/123: show the supported verbs regarding endpoint /users/123.
+
+---
+
+сделать сборщик загрузки модальных форм, опционально сделать загрузчик структуры форм

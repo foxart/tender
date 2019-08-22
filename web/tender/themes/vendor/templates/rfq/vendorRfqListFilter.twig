@@ -1,0 +1,93 @@
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#rfq_date_quote_from').datetimepicker({
+			timepicker: false,
+			format: 'Y-m-d'
+		});
+		$('#rfq_date_quote_to').datetimepicker({
+			timepicker: false,
+			format: 'Y-m-d'
+		});
+		$('#rfq_date_question_from').datetimepicker({
+			timepicker: false,
+			format: 'Y-m-d'
+		});
+		$('#rfq_date_question_to').datetimepicker({
+			timepicker: false,
+			format: 'Y-m-d'
+		});
+	});
+</script>
+<div class="row">
+	<div class="bs-form {{ rfq_list_filter_metadata }}">
+		<form class="form-horizontal" name="rfq-list-filter" method="get">
+			<div class="col-md-10">
+				<div class="row">
+					<div class="col-md-7">
+						<div class="form-group form-group-sm">
+							<div class="col-md-3">
+								<label class="control-label" for="rfq_date_quote_from">RFQ published date</label>
+							</div>
+							<div class="col-md-9">
+								<div class="input-group">
+									<input id="rfq_date_quote_from" class="form-control" name="rfq_date_quote_from" type="text" placeholder="From"/>
+									<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-5">
+						<div class="form-group form-group-sm">
+							<div class="col-md-12">
+								<div class="input-group">
+									<input id="rfq_date_quote_to" class="form-control" name="rfq_date_quote_to" type="text" placeholder="To"/>
+									<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-7">
+						<div class="form-group form-group-sm">
+							<div class="col-md-3">
+								<label class="control-label" for="rfq_date_question_from">Quotation submission date</label>
+							</div>
+							<div class="col-md-9">
+								<div class="input-group">
+									<input id="rfq_date_question_from" class="form-control" name="rfq_date_question_from" type="text" placeholder="From"/>
+									<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-5">
+						<div class="form-group form-group-sm">
+							<div class="col-md-12">
+								<div class="input-group">
+									<input id="rfq_date_question_to" class="form-control" name="rfq_date_question_to" type="text" placeholder="To"/>
+									<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group form-group-sm">
+							<div class="col-md-12">
+								<button class="btn btn-default btn-sm btn-block" type="submit">
+									Filter
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+

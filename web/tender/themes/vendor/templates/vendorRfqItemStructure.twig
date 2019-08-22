@@ -1,0 +1,28 @@
+{#MODAL#}
+{{ rfq_material_form }}
+{#MODAL#}
+<div class="page-header">
+	<h1>Request for quotation</h1>
+</div>
+<div class="indent"></div>
+<div class="row">
+	<div class="col-md-4">
+		<div id="rfq_item">
+			{{ rfq_item }}
+		</div>
+	</div>
+	<div class="col-md-8">
+		{{ rfq_vendor_company_menu }}
+
+		<div class="indent"></div>
+		<div id="rfq_material_list">
+			{{ rfq_material_list }}
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div class="indent"></div>
+		<a class="btn btn-sm btn-default pull-right" href="{{ rfq_item_url_back }}">Back</a>
+	</div>
+</div>

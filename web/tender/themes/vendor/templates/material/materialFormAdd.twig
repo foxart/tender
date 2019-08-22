@@ -1,0 +1,68 @@
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#material_id').select2({
+			minimumInputLength: 0,
+			multiple: true,
+			escapeMarkup: function (markup) {
+				return markup;
+			},
+			ajax: {
+				url: function () {
+					return $.data(document.body, 'bs-modal').material_select;
+				},
+				dataType: 'json',
+				context: this,
+				data: function (params) {
+					return {
+						query_string: params.term,
+						page: params.page
+					};
+				},
+				processResults: function (data) {
+					return {
+						results: data.items
+					};
+				},
+				cache: true
+			}
+		});
+		$('#material-form-add').on('hide.bs.modal', function () {
+			$('#material_id option').each(function () {
+				$(this).remove();
+			});
+		})
+	});
+</script>
+
+<div id="material-form-add" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form class="bs-modal form-horizontal" name="material-form-add" method="post" action="#">
+				<div class="modal-header">
+					<button type="button" class="cancel close">
+						<span>&times;</span>
+					</button>
+					<h3 class="modal-title">Add company material</h3>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+
+						<div class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="material_id">materials</label>
+								<div class="col-md-9 has-feedback">
+									<select id="material_id" class="select2 form-control" name="material_id[]" multiple="multiple"></select>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button class="submit btn btn-primary" type="submit">Submit</button>
+					<a class="cancel btn btn-default pull-right" href="#">Close</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

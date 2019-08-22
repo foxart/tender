@@ -1,0 +1,326 @@
+html
+{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+/*
+	FONTS
+*/
+/*
+	Generic fonts: 'serif', 'sans-serif', 'cursive', 'fantasy', 'monospace'
+	Georgia, Times New Roman, Arial, Arial Black, Impact, Trebuchet MS, Verdana, Comic Sans MS, Andale Mono, Courier New
+*/
+.ff_cursive, .ff_cursive pre
+{
+	font-family: Comic Sans MS, cursive;
+}
+
+.ff_monospace, .ff_monospace pre
+{
+	font-family: Andale Mono, Courier New, monospace;
+}
+
+.ff_sans, .ff_sans pre
+{
+	font-family: Arial, Tahoma, Impact, Trebuchet MS, Verdana, sans-serif;
+}
+
+.ff_serif, .ff_serif pre
+{
+	font-family: Times New Roman, Georgia, serif;
+}
+
+/*
+	POSITION
+*/
+.p_a
+{
+	position: absolute;
+}
+
+.p_f
+{
+	position: fixed;
+}
+
+.p_r
+{
+	position: relative;
+}
+
+/*
+	DISPLAY
+*/
+.d_n
+{
+	display: none;
+}
+.d_b
+{
+	display: block;
+}
+.d_in
+{
+	display: inline-block;
+}
+.d_t
+{
+	display: table;
+	vertical-align: inherit;
+}
+.d_tr
+{
+	display: table-row;
+	vertical-align: inherit;
+}
+.d_tc
+{
+	display: table-cell;
+	vertical-align: inherit;
+}
+.d_it
+{
+	display: inline-table;
+}
+
+/*
+	OVERFLOW
+*/
+.o_h
+{
+	overflow: hidden;
+}
+
+/*
+	CLEAR
+*/
+.c_b
+{
+	clear: both;
+}
+.c_l
+{
+	clear: left;
+}
+.c_r
+{
+	clear: right;
+}
+
+/*
+	FLOAT
+*/
+.fl_l
+{
+	float: left;
+}
+.fl_r
+{
+	float: right;
+}
+
+.fl_n {
+	float: none;
+}
+
+/*
+	MARGIN
+*/
+.m_a
+{
+	margin: auto;
+}
+
+/*
+	WIDTH
+*/
+.w_100
+{
+	width: 100%;
+}
+.w_90
+{
+	width: 90%;
+}
+.w_80
+{
+	width: 80%;
+}
+.w_70
+{
+	width: 70%;
+}
+.w_60
+{
+	width: 60%;
+}
+.w_50
+{
+	width: 50%;
+}
+.w_40
+{
+	width: 40%;
+}
+.w_30
+{
+	width: 30%;
+}
+.w_25
+{
+	width: 25%;
+}
+.w_20
+{
+	width: 20%;
+}
+.w_10
+{
+	width: 10%;
+}
+
+/*
+	HEIGHT
+*/
+.h_100
+{
+	height: 100%;
+}
+
+/*
+	FONT-STYLE
+*/
+.fs_i
+{
+	font-style: italic;
+}
+.fs_o
+{
+	font-style: oblique;
+}
+
+/*
+	FONT-WEIGHT
+*/
+.fw_n
+{
+	font-weight: normal;
+}
+.fw_b
+{
+	font-weight: bold;
+}
+
+/*
+	TEXT-ALIGN
+*/
+.ta_l
+{
+	text-align: left;
+}
+.ta_r
+{
+	text-align: right;
+}
+.ta_c
+{
+	text-align: center;
+}
+.ta_j
+{
+	text-align: justify;
+}
+
+/*
+	TEXT-DECORATION
+*/
+.td_n
+{
+	text-decoration: none;
+}
+.td_u
+{
+	text-decoration: underline;
+}
+
+/* TEXT-TRANSFORM */
+.tt_u
+{
+	text-transform: uppercase;
+}
+
+/* WORD-BREAK */
+.wb_ba {
+	word-break: break-all;
+}
+
+.wb_ka {
+	word-break: keep-all;
+}
+
+.ws_nw{
+	white-space: nowrap;
+}
+
+/* VERTICAL-ALIGN */
+.va_bl
+{
+	vertical-align: baseline;
+}
+.va_b
+{
+	vertical-align: bottom;
+}
+.va_m
+{
+	vertical-align: middle;
+}
+.va_sb
+{
+	vertical-align: sub;
+}
+.va_sp
+{
+	vertical-align: super;
+}
+.va_tb
+{
+	vertical-align: text-bottom;
+}
+.va_tt
+{
+	vertical-align: text-top;
+}
+.va_t
+{
+	vertical-align: top;
+}
+.va_i
+{
+	vertical-align: inherit;
+}
+/* VERTICAL-ALIGN */
+
+/*
+	BORDERS
+*/
+.bs_s
+{
+	border: solid 1px;
+}
+
+.bc_c
+{
+	border-collapse: collapse;
+}

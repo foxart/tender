@@ -1,0 +1,40 @@
+.fa_filter
+{
+
+}
+
+.fa_filter .fa_filter_item, .fa_filter .fa_filter_item_active
+{
+	display: inline-block;
+	margin: 0px 0px 0px 6px;
+	padding: 6px 6px;
+	/*border: solid 1px #B23F3F;*/
+	border: solid 1px #507299;
+	border-radius: 6px;
+	font-weight: bold;
+	text-decoration: none;
+	/*color: #B23F3F;*/
+	color: #507299;
+	background-color: #FFFFFF;
+}
+
+.fa_filter .fa_filter_item:first-of-type, .fa_filter .fa_filter_item_active:first-of-type
+{
+	margin: 0px 0px 0px 0px;
+}
+
+.fa_filter .fa_filter_item_active
+{
+	color: #FFFFFF;
+	/*background-color: #B23F3F;*/
+	background-color: #507299;
+
+}
+
+.fa_filter .fa_filter_item:hover
+{
+	/*color: #B23F3F;*/
+	/*background-color: #E8C5C5;*/
+	color: #507299;
+	background-color: #7C95B3;
+}

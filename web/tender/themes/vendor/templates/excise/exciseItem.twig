@@ -1,0 +1,58 @@
+{#MODAL FORMS#}
+{{ excise_form_update }}
+{#MODAL FORMS#}
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="form-group">
+			<a class="btn btn-primary btn-sm pull-right bs-modal-link {{ excise_metadata_update }}" title="Change" href="#">
+				Edit
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="indent"></div>
+
+<div class="row">
+	<div class="col-md-12">
+		<table class="table table-striped">
+			<tr>
+				<td class="col-md-6">Tax type</td>
+				<td><strong>{{ excise_tax }}</strong></td>
+			</tr>
+			<tr>
+				<td>Excise Basis:</td>
+				<td><strong>{{ excise_basis }}</strong></td>
+			</tr>
+			<tr>
+				<td>Are you registered with Excise?</td>
+				<td><strong>{{ excise_registration }}</strong></td>
+			</tr>
+			<tr>
+				<td>Excise registration number</td>
+				<td><strong>{{ excise_registration_number }}</strong></td>
+			</tr>
+			<tr>
+				<td>Are you registered with Service Tax?</td>
+				<td><strong>{{ excise_service }}</strong></td>
+			</tr>
+			<tr>
+				<td>Service Registration Number</td>
+				<td><strong>{{ excise_service_number }}</strong></td>
+			</tr>
+			<tr>
+				<td>Are you registered with Sales Tax?</td>
+				<td><strong>{{ excise_sales }}</strong></td>
+			</tr>
+			<tr>
+				<td>TIN Number</td>
+				<td><strong>{{ excise_sales_number }}</strong></td>
+			</tr>
+			<tr>
+				<td>Import export license number</td>
+				<td><strong>{{ excise_license }}</strong></td>
+			</tr>
+		</table>
+	</div>
+</div>

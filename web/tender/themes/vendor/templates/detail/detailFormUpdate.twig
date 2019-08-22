@@ -1,0 +1,171 @@
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#detail-form-update #detail_country').autocomplete({
+			source: function (request, response) {
+				$.ajax({
+					url: '{{ geo_country_url }}',
+					type: "GET",
+					dataType: "json",
+					data: {
+						geo_country: request.term
+					},
+					success: function (data) {
+						response($.map(data, function (item) {
+							return item;
+						}));
+					}
+				});
+			},
+			minLength: 1
+		});
+		$('#detail-form-update #detail_region').autocomplete({
+			source: function (request, response) {
+				$.ajax({
+					url: '{{ geo_region_url }}',
+					type: "GET",
+					dataType: "json",
+					data: {
+						geo_country: $('#detail-form-update input[name="detail_country"]').val(),
+						geo_region: request.term
+					},
+					success: function (data) {
+						response($.map(data, function (item) {
+							return item;
+						}));
+					}
+				});
+			},
+			minLength: 1
+		});
+		$('#detail-form-update #detail_city').autocomplete({
+			source: function (request, response) {
+				$.ajax({
+					url: '{{ geo_city_url }}',
+					type: "GET",
+					dataType: "json",
+					data: {
+						geo_country: $('#detail-form-update input[name="detail_country"]').val(),
+						geo_region: $('#detail-form-update input[name="detail_region"]').val(),
+						geo_city: request.term
+					},
+					success: function (data) {
+						response($.map(data, function (item) {
+							return item;
+						}));
+					}
+				});
+			},
+			minLength: 1
+		});
+	});
+</script>
+
+<div id="detail-form-update" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form class="bs-modal form-horizontal" name="detail-form-update" method="post" action="#">
+				<div class="modal-header">
+					<button type="button" class="cancel close">
+						<span>&times;</span>
+					</button>
+					<h3 class="modal-title"></h3>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<div class="form-group form-group-sm">
+								<div class="col-md-12 text-center has-feedback">
+									<input id="detail_fake" class="form-control hidden" name="detail_fake"/>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="detail_country">Country</label>
+								<div class="col-md-9 has-feedback">
+									<input id="detail_country" class="form-control" name="detail_country" type="text" value="">
+									<span class="form-control-feedback"></span>
+									<div class="help-block"></div>
+								</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="detail_region">Region</label>
+								<div class="col-md-9 has-feedback">
+									<input id="detail_region" class="form-control" name="detail_region" type="text" value="">
+									<span class="form-control-feedback"></span>
+									<div class="help-block"></div>
+								</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="detail_city">City</label>
+								<div class="col-md-9 has-feedback">
+									<input id="detail_city" class="form-control" name="detail_city" type="text" value="">
+									<span class="form-control-feedback"></span>
+									<div class="help-block"></div>
+								</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="detail_district">District</label>
+								<div class="col-md-9 has-feedback">
+									<input id="detail_district" class="form-control" name="detail_district" type="text" value="">
+									<span class="form-control-feedback"></span>
+									<div class="help-block"></div>
+								</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="detail_street">Street</label>
+								<div class="col-md-9 has-feedback">
+									<input id="detail_street" class="form-control" name="detail_street" type="text" value="">
+									<span class="form-control-feedback"></span>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="detail_house">House №</label>
+								<div class="col-md-9 has-feedback">
+									<input id="detail_house" class="form-control" name="detail_house" type="text" value="">
+									<span class="form-control-feedback"></span>
+									<div class="help-block"></div>
+								</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="detail_postal">Postal code</label>
+								<div class="col-md-9 has-feedback">
+									<input id="detail_postal" class="form-control" name="detail_postal" type="text" value="">
+									<span class="form-control-feedback"></span>
+									<div class="help-block"></div>
+								</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="detail_email">Email</label>
+								<div class="col-md-9 has-feedback">
+									<input id="detail_email" class="form-control" name="detail_email" type="text" value="">
+									<span class="form-control-feedback"></span>
+									<div class="help-block"></div>
+								</div>
+							</div>
+
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="detail_phone">Phone</label>
+								<div class="col-md-9 has-feedback">
+									<input id="detail_phone" class="form-control" name="detail_phone" type="text" value="">
+									<span class="form-control-feedback"></span>
+									<div class="help-block"></div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button class="submit btn btn-primary" type="submit">Submit</button>
+					<a class="cancel btn btn-default pull-right" href="#">Close</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+

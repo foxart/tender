@@ -1,0 +1,30 @@
+Vtiger Integration in dm.comodo.com:
+------------------------------------
+Ref. Url: https://dm.comodo.com/#sales
+- Form validated using jquery [js file path: https://dm.comodo.com/js/script.js]
+- After jquery validation, sales.php will be processed by Ajax and response message from ajax will be shown to user.
+- Vtiger process is coded at sales.php, which contain the following files:
+	class_db.php 	[Path: https://dm.comodo.com/classes/class_db.php]
+	class_sql.php 	[Path: https://dm.comodo.com/classes/class_sql.php]
+	class_mdm.php 	[Path: https://dm.comodo.com/classes/class_mdm.php]
+	functions.php 	[Path: https://dm.comodo.com/functions.php] [But this is old file and functinality not used in current process]
+- We can fetch vtiger DB results at https://dm.comodo.com/mdm-db-records.php [csv output]
+- mdm-db-records.php file contain the following files:
+	class_db.php 	[Path: https://dm.comodo.com/classes/class_db.php]
+	class_sql.php 	[Path: https://dm.comodo.com/classes/class_sql.php]
+	class_mdm.php 	[Path: https://dm.comodo.com/classes/class_mdm.php]
+About Vtiger:
+-------------
+- Vtiger is nothing but "saleshub" DB
+- We should always use the TABLE "ext_data.web_lead" in vtiger DB
+- We should use UNIQUE VALUE for the column "comodo_webform_id" in the table ext_data.web_lead
+- Using comodo_webform_id we can identify the form
+Attached Files:
+---------------
+	I have attached following files used for vtiger integration:
+	- script.js
+	- sales.php
+	- class_db.php
+	- class_sql.php
+	- class_mdm.php
+	- mdm-db-records.php

@@ -1,0 +1,73 @@
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#legal_id').select2({
+			minimumInputLength: 0,
+			multiple: true,
+			escapeMarkup: function (markup) {
+				return markup;
+			},
+//			separator: '|',
+			ajax: {
+				url: function () {
+					return $.data(document.body, 'bs-modal').select_url;
+				},
+				dataType: 'json',
+//				delay: 250,
+				context: this,
+				data: function (params) {
+					return {
+						query_string: params.term,
+						page: params.page
+					};
+				},
+				processResults: function (data) {
+//					params.page = params.page || 1;
+					return {
+						results: data.items
+//						pagination: {
+//							more: (params.page * 30) < data.total_count
+//						}
+					};
+				},
+				cache: true
+			}
+		});
+		$('#legal-form-add').on('hide.bs.modal', function () {
+			$("#legal_id option").each(function () {
+				$(this).remove();
+			});
+		})
+	});
+</script>
+
+<div id="legal-form-add" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form class="bs-modal form-horizontal" name="legal-form-add" method="post" action="#">
+				<div class="modal-header">
+					<button type="button" class="cancel close">
+						<span>&times;</span>
+					</button>
+					<h3 class="modal-title">Add company legal</h3>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="legal_id">legals</label>
+								<div class="col-md-9 has-feedback">
+									<select id="legal_id" class="select2 form-control" name="legal_id[]" multiple="multiple"></select>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button class="submit btn btn-primary" type="submit">Submit</button>
+					<a class="cancel btn btn-default pull-right" href="#">Close</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

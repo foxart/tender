@@ -1,0 +1,241 @@
+<script type="text/javascript">
+	$(document).ready(function () {
+		jQuery('#collective_ref_no_datetimepicker').datetimepicker({
+			timepicker: false,
+			format: 'd.m.Y'
+		});
+		jQuery('#last_date_of_quote_submission_datetimepicker').datetimepicker({
+			timepicker: false,
+			format: 'd.m.Y'
+		});
+		jQuery('#last_date_of_questions_submission_datetimepicker').datetimepicker({
+			timepicker: false,
+			format: 'd.m.Y'
+		});
+	});
+</script>
+<div class="row">
+	<div class="col-md-12">
+		<h2 class="text-capitalize">new <span class="text-uppercase">rfq</span></h2>
+	</div>
+	<p>&nbsp;</p>
+	<div class="o_h">
+		{{ content }}
+	</div>
+</div>
+<form method="post" action="{{ action }}" autocomplete="off">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="form-group form-group-sm">
+				<label class="col-md-6 control-label" for="collective_ref_no">Collective Reference Number</label>
+				<div class="col-md-6 input-group">
+					<input id="collective_ref_no" class="form-control ui-autocomplete-input" name="collective_ref_no" type="text" value="" autocomplete="off">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="form-group form-group-sm">
+				<label class="col-md-6" for="">Purchase Organization</label>
+				<div class="col-md-6 input-group has-feedback">
+					<select id="account_type_id" class="form-control" name="account_type_id">
+						<option value="">[ select ]</option>
+						{{ companiesList }}
+					</select>
+					<div class="help-block"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="form-group form-group-sm">
+				<label class="col-md-6 control-label" for="collective_ref_no">RFQ Published Date</label>
+				<!--<div class="col-md-6 input-group">
+					<input id="collective_ref_no" class="form-control ui-autocomplete-input" name="collective_ref_no" type="text" value="" autocomplete="off">
+				</div>-->
+				<div class="col-md-6 input-group">
+					<input id="collective_ref_no_datetimepicker" type="text" class="form-control"/>
+					<span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+				</span>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="form-group form-group-sm">
+				<label class="col-md-6" for="">Initiated by</label>
+				<div class="col-md-6 input-group">
+					<input id="collective_ref_no" class="form-control ui-autocomplete-input" name="collective_ref_no" type="text" value="" autocomplete="off">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="form-group form-group-sm">
+				<label class="col-md-6" for="">Last Date of Quote Submission</label>
+				<div class="col-md-6 input-group">
+					<input id="last_date_of_quote_submission_datetimepicker" type="text" class="form-control"/>
+					<span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+				</span>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="form-group form-group-sm">
+				<label class="col-md-6" for="">Last Date of Questions Submission</label>
+				<div class="col-md-6 input-group">
+					<input id="last_date_of_questions_submission_datetimepicker" type="text" class="form-control"/>
+					<span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+				</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="form-group form-group-sm">
+				<label class="col-md-3" for="">Remarks</label>
+				<div class="col-md-9 input-group">
+					<textarea class="form-control noresize" rows="3"></textarea>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="form-group form-group-sm">
+				<label class="col-md-3" for="">Terms and Conditions</label>
+				<div class="col-md-9 input-group">
+					<textarea class="form-control noresize" rows="3"></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<h3 class="text-capitalize">items</h3>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="fa-table ta_c">
+			{{ table }}
+		</div>
+	</div>
+	<div class="row">
+		<br>
+		<div class="col-md-12">
+			<a href="/rfq/create" type="button" class="btn btn-default text-capitalize">add new material</a>
+		</div>
+		<br><br>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<h3 class="text-capitalize">choose vendor</h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-2">
+			<div class="form-group form-group-sm">
+				<label class="col-md-9 control-label" for="collective_ref_no">Vendor Bridge Code</label>
+				<div class="col-md-3 input-group">
+					<input id="collective_ref_no" class="form-control ui-autocomplete-input" name="collective_ref_no" type="text" value="" autocomplete="off">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="form-group form-group-sm">
+				<label class="col-md-6 control-label" for="collective_ref_no">Vendor Name</label>
+				<div class="col-md-6 input-group">
+					<input id="collective_ref_no" class="form-control ui-autocomplete-input" name="collective_ref_no" type="text" value="" autocomplete="off">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="form-group form-group-sm">
+				<label class="col-md-8 control-label" for="collective_ref_no">Vendor ERP Code</label>
+				<div class="col-md-4 input-group">
+					<input id="collective_ref_no" class="form-control ui-autocomplete-input" name="collective_ref_no" type="text" value="" autocomplete="off">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="form-group form-group-sm">
+				<label class="col-md-7 control-label" for="collective_ref_no">Main Family</label>
+				<div class="col-md-5 input-group">
+					<select id="account_type_id" class="form-control" name="account_type_id">
+						<option value=""></option>
+						<option value="1">ABDD</option>
+						<option value="2">ABDE</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="form-group form-group-sm">
+				<label class="col-md-7 control-label" for="collective_ref_no">Sub Family</label>
+				<div class="col-md-5 input-group">
+					<select id="account_type_id" class="form-control" name="account_type_id">
+						<option value=""></option>
+						<option value="1">123</option>
+						<option value="2">234</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-1">
+			<button type="button" class="btn btn-default text-capitalize">filter</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-5">
+			<div class="form-group form-group-sm">
+				<label class="col-md-3 text-capitalize" for="">choose
+					vendors:</label>
+				<div class="col-md-9 input-group">
+					<textarea class="form-control noresize" rows="3"></textarea>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-1">
+			<button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-chevron-left"></span>
+			</button>
+			<br>
+			<button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-chevron-right"></span>
+			</button>
+		</div>
+		<div class="col-md-6">
+			<div class="form-group form-group-sm">
+				<label class="col-md-3 text-capitalize" for="">selected
+					vendors:</label>
+				<div class="col-md-9 input-group">
+					<textarea class="form-control  noresize" rows="3"></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<h3 class="text-capitalize">attachments</h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-5">
+			<div class="form-group form-group-sm">
+				<label class="col-md-3 control-label" for="collective_ref_no">Select file</label>
+				<div class="col-md-5">
+					<input id="collective_ref_no" name="collective_ref_no" type="file" value="" autocomplete="off">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-5 col-md-6 form-inline">
+			<br>
+			<button type="reset" class="btn btn-default">cancel</button>
+			<button type="submit" class="btn btn-default">publish <span class="text-uppercase">rfq</span></button>
+		</div>
+	</div>
+</form>
+

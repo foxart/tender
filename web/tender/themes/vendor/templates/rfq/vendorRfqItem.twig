@@ -1,0 +1,46 @@
+<h3>RFQ details</h3>
+
+{#<a class="btn btn-sm btn-primary pull-right bs-modal-link {{ rfq_metadata_update }}" href="#">Change RFQ</a>#}
+
+<div class="indent"></div>
+
+<table class="table table-striped">
+	<tbody>
+	<tr>
+		<td class="col-md-6">Reference №</td>
+		<td><strong>{{ rfq_id }}</strong></td>
+	</tr>
+	<tr>
+		<td>Company</td>
+		<td><strong>{{ company_name }}</strong></td>
+	</tr>
+	<tr>
+		<td>Purchase group</td>
+		<td><strong>{{ rfq_name }}</strong></td>
+	</tr>
+	<tr>
+		<td>Rfq publish date</td>
+		<td><strong>{{ rfq_date_publish }}</strong></td>
+	</tr>
+	<tr>
+		<td>Quotation submission last date</td>
+		<td><strong>{{ rfq_date_question }}</strong></td>
+	</tr>
+	<tr>
+		<td>Question submission last date</td>
+		<td><strong>{{ rfq_date_quote }}</strong></td>
+	</tr>
+	<tr>
+		<td>Remarks</td>
+		<td><strong>{{ rfq_remark }}</strong></td>
+	</tr>
+	<tr>
+		<td>Terms</td>
+		<td><strong>{{ rfq_term }}</strong></td>
+	</tr>
+	<tr>
+		<td>Status</td>
+		<td><strong>{{ rfq_status }}</strong></td>
+	</tr>
+	</tbody>
+</table>

@@ -1,0 +1,25 @@
+INSERT INTO
+	`rfq_quotation`
+	(
+		`rfq_quotation`.`rfq_id`,
+		`rfq_quotation`.`rfq_cross_material_id`,
+		`rfq_quotation`.`rfq_cross_vendor_company_id`,
+		`rfq_quotation`.`delivery_date`,
+		`rfq_quotation`.`delivery_cost`,
+		`rfq_quotation`.`quantity`,
+		`rfq_quotation`.`tax_cost`,
+		`rfq_quotation`.`total_cost`,
+		`rfq_quotation`.`unit_cost`
+	)
+VALUES
+	(
+		:rfq_id,
+		:rfq_cross_material_id,
+		:rfq_cross_vendor_company_id,
+		:rfq_material_quotation_delivery_date,
+		:rfq_material_quotation_delivery_cost,
+		:rfq_material_quotation_quantity,
+		:rfq_material_quotation_tax_cost,
+		:rfq_material_quotation_total_cost,
+		:rfq_material_quotation_unit_cost
+	)

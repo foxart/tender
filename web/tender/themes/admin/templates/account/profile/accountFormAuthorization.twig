@@ -1,0 +1,44 @@
+<div id="form-authorization" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form class="bs-modal form-horizontal" name="form-authorization" method="post" action="#">
+				<div class="modal-header">
+					<button type="button" class="cancel close">
+						<span>&times;</span>
+					</button>
+					<h3 class="modal-title"></h3>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<div class="form-group form-group-sm">
+								<div class="col-md-12 text-center has-feedback">
+									<input id="fake_validation_message" name="fake_validation_message" class="form-control hidden"/>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label for="authorization_id" class="col-md-3 control-label">
+									Role
+								</label>
+								<div class="col-md-9 has-feedback">
+									<select id="authorization_id" class="form-control" name="authorization_id">
+										<option value="0" selected>[select]</option>
+										{{ authorization_option }}
+									</select>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button class="submit btn btn-primary" type="submit">Submit</button>
+					<a class="cancel btn btn-default" href="#">Close</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

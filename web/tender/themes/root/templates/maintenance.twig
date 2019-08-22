@@ -1,0 +1,20 @@
+<div class="page-header">
+	<h1>
+		Maintenance mode
+	</h1>
+
+</div>
+
+<div>
+
+	<button class="fa-js-ajax btn btn-success {{ show_files_metadata }}" type="button" >Show Broken Files</button>
+	<button class="fa-js-ajax btn btn-success  {{ del_files_metadata }}" type="button">Remove Broken Files</button>
+	<button class="fa-js-ajax btn btn-success {{ show_dirs_metadata }}" type="button" >Show Empty Folders</button>
+	<button class="fa-js-ajax btn btn-success  {{ del_dirs_metadata }}" type="button">Remove Empty Folders</button>
+</div>
+<div class="indent"></div>
+
+<div class="container">{{ content }}</div>
+
+<div id="ajax"></div>
+

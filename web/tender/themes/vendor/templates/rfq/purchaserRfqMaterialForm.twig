@@ -1,0 +1,89 @@
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#rfq_material_quotation_delivery_date').datetimepicker({
+			timepicker: false,
+			format: 'Y-m-d'
+		});
+	});
+</script>
+<div id="rfq-material-form" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form class="bs-modal form-horizontal" name="rfq-material-form" method="post" action="#">
+				<div class="modal-header">
+					<button type="button" class="cancel close">
+						<span>&times;</span>
+					</button>
+					<h3 class="modal-title"></h3>
+				</div>
+				<div class="modal-body">
+					<div class="form-group form-group-sm">
+						<div class="col-md-12 has-feedback text-center">
+							<label class="control-label hidden" for="rfq_material_fake">rfq_material_fake</label>
+							<input id="rfq_material_fake" class="form-control hidden" name="rfq_material_fake">
+							<div class="help-block"></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="rfq_material_quotation_quantity">Quantity</label>
+						<div class="col-md-9 has-feedback">
+							<input id="rfq_material_quotation_quantity" class="form-control" name="rfq_material_quotation_quantity" type="text">
+							<span class="form-control-feedback"></span>
+							<div class="help-block"></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="rfq_material_quotation_unit_cost">Unit price</label>
+						<div class="col-md-9 has-feedback">
+							<input id="rfq_material_quotation_unit_cost" class="form-control" name="rfq_material_quotation_unit_cost" type="text">
+							<span class="form-control-feedback"></span>
+							<div class="help-block"></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="rfq_material_quotation_delivery_date">Delivery date</label>
+						<div class="col-md-9 has-feedback">
+							<div class="input-group ">
+								<input id="rfq_material_quotation_delivery_date" class="form-control" name="rfq_material_quotation_delivery_date" type="text" placeholder="Delivery last date">
+								{#<span class="form-control-feedback"></span>#}
+								<span class="input-group-addon">
+									<span class="glyphicon glyphicon-calendar"></span>
+								</span>
+							</div>
+							<div class="help-block"></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="rfq_material_quotation_delivery_cost">Delivery cost</label>
+						<div class="col-md-9 has-feedback">
+							<input id="rfq_material_quotation_delivery_cost" class="form-control" name="rfq_material_quotation_delivery_cost" type="text">
+							<span class="form-control-feedback"></span>
+							<div class="help-block"></div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="rfq_material_quotation_tax_cost">Tax cost</label>
+						<div class="col-md-9 has-feedback">
+							<input id="rfq_material_quotation_tax_cost" class="form-control" name="rfq_material_quotation_tax_cost" type="text">
+							<span class="form-control-feedback"></span>
+							<div class="help-block"></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="rfq_material_quotation_total_cost">Total cost</label>
+						<div class="col-md-9 has-feedback">
+							<input id="rfq_material_quotation_total_cost" class="form-control" name="rfq_material_quotation_total_cost" type="text">
+							<span class="form-control-feedback"></span>
+							<div class="help-block"></div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button class="submit btn btn-primary" type="submit">Submit</button>
+					<a class="cancel btn btn-default" href="#">Close</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

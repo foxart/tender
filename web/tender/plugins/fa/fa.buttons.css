@@ -1,0 +1,35 @@
+.fa_button
+{
+	/*display: block;*/
+	/*float: left;*/
+	display: inline-block;
+	margin: 0px 12px 0px 0px;
+	padding: 6px 6px;
+	/*border: solid 1px #B23F3F;*/
+	border: solid 1px #507299;
+	border-radius: 6px;
+}
+
+.fa_button
+{
+	font-weight: bold;
+	text-decoration: none;
+	/*color: #B23F3F;*/
+	color: #507299;
+	background-color: #FFFFFF;
+}
+
+.fa_button.active
+{
+	color: #FFFFFF;
+	/*background-color: #B23F3F;*/
+	background-color: #507299;
+}
+
+a.fa_button:hover
+{
+	/*color: #B23F3F;*/
+	/*background-color: #E8C5C5;*/
+	color: #507299;
+	background-color: #7C95B3;
+}

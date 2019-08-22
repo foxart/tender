@@ -1,0 +1,48 @@
+<div id="authorization-form" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form class="bs-modal form-horizontal" name="authorization-form" method="post" action="#">
+				<div class="modal-header">
+					<button type="button" class="cancel close">
+						<span>&times;</span>
+					</button>
+					<h3 class="modal-title">Add new legal entity</h3>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="authorization_name">Name</label>
+								<div class="col-md-9 has-feedback">
+									<input id="authorization_name" class="form-control" name="authorization_name" type="text" value="">
+									<span class="form-control-feedback"></span>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label for="authorization_account_type_id" class="col-md-3 control-label">
+									Type
+								</label>
+								<div class="col-md-9 has-feedback">
+									<select id="authorization_account_type_id" class="form-control" name="authorization_account_type_id">
+										<option value="" selected>[select]</option>
+										{{ account_type_option }}
+									</select>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button class="submit btn btn-primary" type="submit">Submit</button>
+					<a class="cancel btn btn-default">Close</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,43 @@
+{#MODAL FORMS#}
+{{ account_form_update }}
+{#MODAL FORMS#}
+<div class="row">
+	<div class="col-md-12">
+		<a class="btn btn-primary btn-sm pull-right bs-modal-link {{ account_metadata_update }}" title="Edit" href="#">
+			Edit
+		</a>
+	</div>
+</div>
+
+<div class="indent"></div>
+
+<div class="row">
+	<div class="col-md-12">
+		<table class="table table-striped">
+			<tr>
+				<td>Surname</td>
+				<td><strong>{{ account_surname }}</strong></td>
+			</tr>
+			<tr>
+				<td>Name</td>
+				<td><strong>{{ account_name }}</strong></td>
+			</tr>
+			<tr>
+				<td>Patronymic</td>
+				<td><strong>{{ account_patronymic }}</strong></td>
+			</tr>
+			<tr>
+				<td>Type</td>
+				<td><strong>{{ account_type_name }}</strong></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><strong>{{ authentication_email }}</strong></td>
+			</tr>
+			<tr>
+				<td>Role</td>
+				<td><strong>{{ authorization_name }}</strong></td>
+			</tr>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,81 @@
+<script type="text/javascript">
+	$(document).on('change', '#material-form-update #material_file_attachement', function () {
+		$('#material-form-update').find('#material_file').val($(this).prop('files')[0].name);
+		$('#material-form-update').find('#material_title').val($(this).prop('files')[0].name);
+	});
+
+	$(document).on('click', '#material-form-update #material_file_upload', function () {
+		$('#material-form-update #material_file_attachement').trigger('click');
+	});
+</script>
+
+<div id="material-form-update" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form class="bs-modal form-horizontal" name="material-form-update" method="post" enctype="multipart/form-data" action="#">
+				<div class="modal-header">
+					<button type="button" class="cancel close">
+						<span>&times;</span>
+					</button>
+					<h3 class="modal-title">Change company material</h3>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="material_group_name">group</label>
+								<div class="col-md-9 has-feedback">
+									<input id="material_group_name" class="form-control" name="material_group_name" type="text" disabled="disabled">
+									<span class="form-control-feedback"></span>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="material_name">name</label>
+								<div class="col-md-9 has-feedback">
+									<input id="material_name" class="form-control" name="material_name" type="text" disabled="disabled">
+									<span class="form-control-feedback"></span>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="material_title">title</label>
+								<div class="col-md-9 has-feedback">
+									<input id="material_title" class="form-control" name="material_title" type="text">
+									<span class="form-control-feedback"></span>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="material_file">file</label>
+								<input id="material_file_attachement" class="hidden" name="material_file_attachement" type="file">
+								<div class="col-md-9">
+									<div class="input-group input-group-sm">
+										<span class="input-group-btn">
+        									<button id="material_file_upload" class="btn btn-default" type="button">Browse</button>
+      									</span>
+										<input id="material_file" name="material_file" class="form-control" type="text" disabled="disabled"/>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-offset-3 col-md-9 has-feedback">
+							<input id="material_file_fake" class="form-control hidden"/>
+							<div class="help-block"></div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button class="submit btn btn-primary" type="submit">Submit</button>
+					<a class="cancel btn btn-default pull-right" href="#">Close</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

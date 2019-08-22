@@ -1,0 +1,20 @@
+<IfModule mod_php5.c>
+#	XDebug Profiler
+#	php_flag xdebug.remote_enable on
+#	php_flag xdebug.profiler_enable on
+</IfModule>
+
+php_flag display_errors on
+php_flag display_startup_errors on
+php_flag html_errors on
+php_flag log_errors on
+
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^(favicon.ico|robots.txt|sitemap.xml)$ tender/$1 [END]
+RewriteRule ^(fonts|files|plugins|themes)/(.+)$ tender/$1/$2 [END]
+
+#RewriteCond %{REQUEST_FILENAME} ^.+$
+RewriteCond %{REQUEST_URI} ^.+$
+RewriteRule ^.+$ index.php [L]

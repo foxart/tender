@@ -1,0 +1,147 @@
+
+.fa_form form
+{
+	margin: 0px;
+	padding: 0px;
+	border: none;
+}
+
+.fa_form legend
+{
+	margin: 0px;
+	padding: 0px;
+	color: #B23F3F;
+	font-size: 1.2em;
+	line-height: 1.2em;
+	font-weight: 600;
+}
+
+.fa_form fieldset
+{
+	margin: 0px;
+	padding: 0px;
+	border: none;
+}
+
+/*
+* label
+*/
+.fa_form label
+{
+	display: block;
+	margin: 0px;
+	padding: 6px 0px 0px 0px;
+	font-size: 1.1em;
+	line-height: 1.1em;
+}
+
+/*
+* input
+*/
+.fa_form .fa_form_input
+{
+	display: block;
+	margin: 6px 0px 0px 0px;
+	padding: 6px 6px;
+	background-color: #FFFFFF;
+	border: solid 1px #B23F3F;
+	border-radius: 3px;
+}
+
+.fa_form .fa_form_input input
+{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	outline: none;
+	background: transparent;
+}
+
+/*
+* textarea
+*/
+.fa_form .fa_form_textarea
+{
+	display: block;
+	margin: 6px 0px 0px 0px;
+	padding: 6px 6px;
+	background-color: #FFFFFF;
+	border: solid 1px #B23F3F;
+	border-radius: 3px;
+}
+
+.fa_form .fa_form_textarea textarea
+{
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	border: none;
+	outline: none;
+	resize: none;
+}
+
+/*
+* submit
+*/
+.fa_form .fa_form_submit
+{
+	display: block;
+	margin: 6px 0px 0px 0px;
+	padding: 0px 6px;
+	background-color: #B23F3F;
+	border-color: #B23F3F;
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.fa_form .fa_form_submit input
+{
+	width: 100%;
+	margin: 0px;
+	padding: 6px 0px;
+	border: none;
+	outline: none;
+	background: transparent;
+	color: #FFFFFF;
+}
+
+.fa_form .fa_form_submit input:hover
+{
+	/*color: #B23F3F;*/
+	/*background-color: #E8C5C5;*/
+	cursor: pointer;
+}
+
+/*
+* select
+*/
+.fa_form .fa_form_select
+{
+	display: block;
+	margin: 6px 0px;
+	padding: 0px;
+	background-color: #FFFFFF;
+	border: solid 1px #B23F3F;
+	border-radius: 3px;
+}
+
+.fa_form .fa_form_select select
+{
+	margin: 0px;
+	padding: 6px 0px;
+	width: 100%;
+	outline: none;
+	border: none;
+	background: transparent;
+}
+
+/*
+.fa_form .fa_form_select select option
+{
+	display: block;
+	outline: none;
+	border: none;
+}
+*/

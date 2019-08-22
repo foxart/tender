@@ -1,0 +1,65 @@
+<div id="material-form-delete" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form class="bs-modal form-horizontal" name="material-form-delete" method="post" action="#">
+				<div class="modal-header">
+					<button type="button" class="cancel close">
+						<span>&times;</span>
+					</button>
+					<h3 class="modal-title"></h3>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="name">Name</label>
+						<div class="col-md-9 has-feedback">
+							<input id="name" class="form-control" name="material_name" type="text" disabled>
+							<span class="form-control-feedback"></span>
+							<div class="help-block"></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="material_group_id">Material group</label>
+						<div class="col-md-9 has-feedback">
+							<select id="material_group_id" class="form-control" name="material_group_id" disabled>
+								<option selected="selected" value="0">[ select ]</option>
+								{{ material_group_option }}
+							</select>
+							<div class="help-block"></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="description">Short description</label>
+						<div class="col-md-9 has-feedback">
+							<input id="description" class="form-control" name="material_description" type="text" disabled>
+							<span class="form-control-feedback"></span>
+							<div class="help-block"></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="material_uom_id">Uom</label>
+						<div class="col-md-9 has-feedback">
+							<select id="material_uom_id" class="form-control" name="material_uom_id" disabled>
+								<option selected="selected" value="0">[ select ]</option>
+								{{ material_uom_option }}
+							</select>
+							<span class="form-control-feedback"></span>
+							<div class="help-block"></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="po">Po text</label>
+						<div class="col-md-9 has-feedback">
+							<textarea id="po" class="form-control" name="material_po" disabled></textarea>
+							<span class="form-control-feedback"></span>
+							<div class="help-block"></div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button class="submit btn btn-primary" type="submit">Submit</button>
+					<a class="cancel btn btn-default" href="#">Close</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

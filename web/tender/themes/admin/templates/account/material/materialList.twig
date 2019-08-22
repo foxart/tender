@@ -1,0 +1,30 @@
+{#MODAL FORMS#}
+{{ material_form_add }}
+{{ material_form_delete }}
+{{ material_form_update }}
+{#MODAL FORMS#}
+<div class="row">
+	<div class="col-md-2 pull-right">
+		<div class="form-group">
+			<a class="btn btn-block btn-primary btn-sm bs-modal-link {{ material_metadata_add }}" title="Add" href="#">
+				Assign
+			</a>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div class="table fa-table">
+			{{ table }}
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-2 pull-right">
+		<div class="form-group">
+			<a class="btn btn-block btn-default btn-sm" title="Back" href="{{ companies_url }}">
+				Back
+			</a>
+		</div>
+	</div>
+</div>

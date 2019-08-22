@@ -1,0 +1,105 @@
+<div id="jstree-materials">
+	<script>
+		$(document).ready(function () {
+			$('#jstree-demo').jstree({
+				core: {
+					animation: 500,
+					check_callback: true,
+					themes: {
+						stripes: true
+					},
+					'data': {
+						'url': function () {
+							return '{{ material_get_url }}'
+						}
+					}
+				},
+				types: {
+					node: {
+						"icon": "glyphicon glyphicon-file",
+						"valid_children": []
+					}
+				},
+				checkbox: {
+					"keep_selected_style": false
+				},
+				contextmenu: {
+					"items": {
+						0: {
+							title: 'Add',
+							label: 'Add',
+							action: function () {
+								var $instance = $('#jstree-demo').jstree(true);
+								var $metadata = $fa.dom.metadata($('#' + $instance.get_selected())[0]);
+								bootstrap_modal($metadata.add);
+								return true;
+							}
+						},
+						1: {
+							title: 'Edit',
+							label: 'Edit',
+							action: function () {
+								var $instance = $('#jstree-demo').jstree(true);
+								var $metadata = $fa.dom.metadata($('#' + $instance.get_selected())[0]);
+								bootstrap_modal($metadata.update);
+								return true;
+							}
+						},
+						2: {
+							title: 'Delete',
+							label: 'Delete',
+							action: function () {
+								var $instance = $('#jstree-demo').jstree(true);
+								var $metadata = $fa.dom.metadata($('#' + $instance.get_selected())[0]);
+								bootstrap_modal($metadata.delete);
+								return true;
+							}
+						}
+					}
+				},
+				plugins: [
+					"contextmenu",
+					"dnd",
+					"search",
+					"state",
+					"types",
+					"wholerow"
+				]
+			});
+//			$('#jstree-demo').on('changed.jstree', function (e, data) {
+			$('#jstree-demo').on('move_node.jstree', function (e, data) {
+				$('#button-save').prop('disabled', false);
+				$('#button-save').removeClass("btn-success");
+				$('#button-save').addClass("btn-primary");
+				$.ajax({
+					url: "{{ save_node_url }}",
+					data: data.node,
+					method: "POST",
+					success: function (result) {
+						$('#jstree-demo').jstree("refresh");
+						$('#button-save').removeClass("btn-success");
+						$('#button-save').addClass("btn-primary");
+					}
+				});
+			});
+			$('#button-save').click(function () {
+				var $instance = $('#jstree-demo').jstree(true);
+				var $json = $instance.get_json('#', {flat: true});
+				var $jsonString = JSON.stringify($json[0]);
+				console.log($jsonString);
+				$.ajax({
+					url: "{{ save_tree_url }}",
+					data: {data: $jsonString},
+					method: "POST",
+					success: function (result) {
+						$('#jstree-demo').html(result);
+					}
+				});
+			});
+		});
+	</script>
+	{{ material_form_modal }}
+	{{ material_group_form_modal }}
+	<button id="button-save" class="btn btn-success pull-right">Save</button>
+	<div id="jstree-demo"></div>
+</div>

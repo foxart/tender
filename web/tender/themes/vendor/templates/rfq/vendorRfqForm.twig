@@ -1,0 +1,101 @@
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#rfq_date_quote').datetimepicker({
+			timepicker: false,
+			format: 'Y-m-d'
+		});
+		$('#rfq_date_question').datetimepicker({
+			timepicker: false,
+			format: 'Y-m-d'
+		});
+	});
+</script>
+
+<div id="rfq-form" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form class="bs-modal form-horizontal" name="rfq-form" method="post" action="#">
+				<div class="modal-header">
+					<button type="button" class="cancel close">
+						<span>&times;</span>
+					</button>
+					<h3 class="modal-title"></h3>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="rfq_company_id">company</label>
+								<div class="col-md-9 has-feedback">
+									<select id="rfq_company_id" class="form-control" name="rfq_company_id">
+										<option selected="selected" value="0">[ select ]</option>
+										{{ rfq_company_id }}
+									</select>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="rfq_name">purchase group</label>
+								<div class="col-md-9 has-feedback">
+									<input id="rfq_name" class="form-control" name="rfq_name" type="text">
+									<span class="form-control-feedback"></span>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="rfq_date_quote">quotation date</label>
+								<div class="col-md-9 has-feedback">
+									<div class="input-group">
+										<input id="rfq_date_quote" class="form-control" name="rfq_date_quote" type="text" placeholder="Quotation submission last date"/>
+										<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+									</div>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="rfq_date_question">question date</label>
+								<div class="col-md-9 has-feedback">
+									<div class="input-group ">
+										<input id="rfq_date_question" class="form-control" name="rfq_date_question" type="text" placeholder="Question submission last date"/>
+										<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+									</div>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="rfq_remark">remarks</label>
+								<div class="col-md-9 has-feedback">
+									<textarea id="rfq_remark" class="form-control" rows="5" name="rfq_remark"></textarea>
+									<span class="form-control-feedback"></span>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="rfq_term">terms</label>
+								<div class="col-md-9 has-feedback">
+									<textarea id="rfq_term" class="form-control" rows="5" name="rfq_term"></textarea>
+									<span class="form-control-feedback"></span>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button class="submit btn btn-primary" type="submit">Submit</button>
+					<a class="cancel btn btn-default pull-right" href="#">Close</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

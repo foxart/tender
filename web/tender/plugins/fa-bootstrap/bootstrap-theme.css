@@ -1,0 +1,104 @@
+/* Sticky footer styles */
+html {
+	position: relative;
+	min-height: 100%;
+	height: inherit;
+}
+
+body {
+	/* Margin bottom by footer height */
+	margin-bottom: 60px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 60px;
+	background-color: #f5f5f5;
+}
+
+/* Custom page CSS Not required for template or sticky footer method. */
+
+body > .container, body > .container-fluid {
+	padding: 50px 15px 15px 15px;
+	/*border: solid 1px red;*/
+}
+
+body > .container h3, body > .container-fluid h3 {
+	margin: 0;
+	padding: 0;
+}
+
+.footer > .container .text-muted, .footer > .container-fluid .text-muted {
+	margin: 20px 0;
+}
+
+.footer > .container, .footer > .container-fluid {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+code {
+	font-size: 80%;
+}
+
+.indent {
+	/*display: block;*/
+	overflow: hidden;
+	width: 100%;
+	margin: 0;
+	padding: 15px 0 0 0;
+}
+
+.noresize {
+	resize: none;
+}
+
+.page-header {
+	margin: 15px 0 15px 0;
+	padding: 0 0 15px 0;
+}
+
+.btn-file {
+	position: relative;
+	overflow: hidden;
+}
+
+.btn-file input[type=file] {
+	position: absolute;
+	top: 0;
+	right: 0;
+	min-width: 100%;
+	min-height: 100%;
+	font-size: 100px;
+	text-align: right;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	outline: none;
+	background: white;
+	cursor: inherit;
+	display: block;
+}
+
+/*table*/
+table.table > thead:first-child > tr:first-child > th {
+	border: 1px solid #cccccc;
+	background-color: #dddddd;;
+	word-wrap: break-word;
+	/*white-space: pre-line;*/
+	/*overflow-wrap: break-word;*/
+	/*word-break: break-all;*/
+	vertical-align: middle;
+}
+
+/*select2*/
+.select2 {
+	width: 100% !important;
+}

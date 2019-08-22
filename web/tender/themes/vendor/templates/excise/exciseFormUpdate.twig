@@ -1,0 +1,158 @@
+<script type="text/javascript">
+	function excise_form_handle() {
+		var $excise_registration = $('input[name="excise_registration"]:checked').val();
+		var $excise_service = $('input[name="excise_service"]:checked').val();
+		var $excise_sales = $('input[name="excise_sales"]:checked').val();
+		if ($excise_registration === 'n/a' || $excise_registration === 'no') {
+			$('#excise_registration_number_parent').addClass('hidden');
+		} else {
+			$('#excise_registration_number_parent').removeClass('hidden');
+		}
+		if ($excise_service === 'n/a' || $excise_service === 'no') {
+			$('#excise_service_number_parent').addClass('hidden');
+		} else {
+			$('#excise_service_number_parent').removeClass('hidden');
+		}
+		if ($excise_sales === 'n/a' || $excise_sales === 'no') {
+			$('#excise_sales_number_parent').addClass('hidden');
+		} else {
+			$('#excise_sales_number_parent').removeClass('hidden');
+		}
+	}
+	$(document).ready(function () {
+		$('#excise-form-update').on('show.bs.modal', function () {
+			excise_form_handle();
+		});
+	});
+	$(document).on('click', 'input[type="radio"]', function () {
+		excise_form_handle();
+	});
+</script>
+
+<div id="excise-form-update" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form class="bs-modal form-horizontal" name="excise-form-update" method="post" action="#">
+				<div class="modal-header">
+					<button type="button" class="cancel close">
+						<span>&times;</span>
+					</button>
+					<h3 class="modal-title">Change company excise tax</h3>
+				</div>
+
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="excise_tax">Tax type</label>
+								<div class="col-md-9 has-feedback">
+									<select id="excise_tax" class="form-control" name="excise_tax">
+										<option selected="selected" disabled="disabled" value="0">[ select ]</option>
+										{{ excise_tax_option }}
+									</select>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="excise_basis">Excise Basis</label>
+								<div class="col-md-9 has-feedback">
+									<select id="excise_basis" class="form-control" name="excise_basis">
+										<option selected="selected" disabled="disabled" value="0">[ select ]</option>
+										{{ excise_basis_option }}
+									</select>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+						{#
+						excise
+						#}
+						<div class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="excise_excise">Are you registered with
+									Excise?</label>
+								<div class="col-md-9">
+									{{ excise_radio }}
+								</div>
+							</div>
+						</div>
+						<div id="excise_registration_number_parent" class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="excise_registration_number">Excise
+									registration
+									number</label>
+								<div class="col-md-9 has-feedback">
+									<input id="excise_registration_number" class="form-control" name="excise_registration_number" type="text">
+									<span class="form-control-feedback"></span>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+						{#
+						service
+						#}
+						<div class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="excise_service">Are you registered with
+									Service
+									Tax?</label>
+								<div class="col-md-9">
+									{{ service_radio }}
+								</div>
+							</div>
+						</div>
+						<div id="excise_service_number_parent" class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="excise_service_number">Service registration number</label>
+								<div class="col-md-9 has-feedback">
+									<input id="excise_service_number" class="form-control" name="excise_service_number" type="text">
+									<span class="form-control-feedback"></span>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+						{#
+						sales
+						#}
+						<div class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="excise_sales">Are you registered with Sales
+									Tax?</label>
+								<div class="col-md-9">
+									{{ sales_radio }}
+								</div>
+							</div>
+						</div>
+						<div id="excise_sales_number_parent" class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="excise_sales_number">TIN Number</label>
+								<div class="col-md-9 has-feedback">
+									<input id="excise_sales_number" class="form-control" name="excise_sales_number" type="text">
+									<span class="form-control-feedback"></span>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="excise_license">Import export license
+									number</label>
+								<div class="col-md-9 has-feedback">
+									<input id="excise_license" class="form-control" name="excise_license" type="text">
+									<span class="form-control-feedback"></span>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button class="submit btn btn-primary" type="submit">Submit</button>
+					<a class="cancel btn btn-default pull-right" href="#">Close</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

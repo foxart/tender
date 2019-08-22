@@ -1,0 +1,42 @@
+{#MODAL FORMS#}
+{{ contact_form_update }}
+{#MODAL FORMS#}
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="form-group">
+			<a class="btn btn-primary btn-sm pull-right bs-modal-link {{ contact_metadata_update }}" title="Change" href="#">
+				Edit
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="indent"></div>
+
+<div class="row">
+	<div class="col-md-12">
+		<table class="table table-striped">
+			<tr>
+				<td class="col-md-6">Person</td>
+				<td><strong>{{ contact_person }}</strong></td>
+			</tr>
+			<tr>
+				<td>Tittle</td>
+				<td><strong>{{ contact_title }}</strong></td>
+			</tr>
+			<tr>
+				<td>Position</td>
+				<td><strong>{{ contact_position }}</strong></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><strong>{{ contact_email }}</strong></td>
+			</tr>
+			<tr>
+				<td>Phone</td>
+				<td><strong>{{ contact_phone }}</strong></td>
+			</tr>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,21 @@
+INSERT INTO
+	`rfq`
+	(
+		`account_id`,
+		`purchaser_company_id`,
+		`date_question`,
+		`date_quote`,
+		`name`,
+		`remark`,
+		`term`
+	)
+VALUES
+	(
+		:account_id,
+		:rfq_company_id,
+		:rfq_date_question,
+		:rfq_date_quote,
+		:rfq_name,
+		:rfq_remark,
+		:rfq_term
+	)

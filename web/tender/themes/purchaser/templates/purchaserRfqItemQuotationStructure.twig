@@ -1,0 +1,40 @@
+{#MODAL#}
+{{ rfq_form }}
+{{ rfq_material_form }}
+{{ rfq_material_form_delete }}
+{{ rfq_company_form }}
+{{ rfq_company_form_delete }}
+{#MODAL#}
+<div class="page-header">
+	<h1>Request for quotation</h1>
+</div>
+<div class="indent"></div>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<a href="#rfq-item-collapse" class="btn-block" data-toggle="collapse">
+			RFQ details
+			<span class="pull-right glyphicon glyphicon-modal-window"></span>
+		</a>
+	</div>
+	<div id="rfq-item-collapse" class="panel-body collapse">
+		<h3>RFQ details</h3>
+		<div class="indent"></div>
+		<div id="rfq_item">
+			{{ rfq_item }}
+		</div>
+	</div>
+</div>
+{#<div id="rfq_item" class="col-md-4">#}
+	{#</div>#}
+	{#<div id="rfq_quotation_list" class="col-md-8">#}
+	{#</div>#}
+<div class="row">
+	<div id="rfq_quotation_list" class="col-md-12">
+		{{ rfq_quotation_list }}
+	</div>
+</div>
+<hr/>
+<div class="indent"></div>
+<div>
+	<a class="btn btn-sm btn-default pull-right" href="{{ rfq_item_quotation_url_back }}">Back</a>
+</div>

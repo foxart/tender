@@ -1,0 +1,42 @@
+{
+	"name": "foxart/procurex",
+	"description": "Procurex: tender platform",
+	"keywords": [
+		"tender",
+		"purchaser",
+		"vendor"
+	],
+	"homepage": "http://tender.foxart.org",
+	"license": [
+		"BSD-3-Clause",
+		"GPL-2.0",
+		"GPL-3.0"
+	],
+	"authors": [
+		{
+			"name": "Kosenko Ivan",
+			"email": "foxartorg@gmail.com"
+		},
+		{
+			"name": "Podtykan Artyom",
+			"email": "N0983880580@gmail.com"
+		},
+		{
+			"name": "Zhukov Dmitriy",
+			"email": "raibeh@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"fa\\": "vendor/fa/",
+			"tender\\": "application/tender/"
+		}
+	},
+	"require": {
+		"filp/whoops": "2.*",
+		"tracy/tracy": "^2.4",
+		"phpmailer/phpmailer": "^5.2",
+		"phpoffice/phpexcel": "^1.8",
+		"twbs/bootstrap": "4.0.0-alpha.6"
+	}
+}

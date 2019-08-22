@@ -1,0 +1,58 @@
+<script type="text/javascript">
+	$(function () {
+		$('#jstree').jstree({
+			'core': {
+				'data': [
+					{
+						"text": "Root node",
+						"state": {
+							"opened": true
+						},
+						"children": [
+							{
+								"text": "Child node 1",
+								"state": {
+//									"selected": true
+								},
+								"icon": "glyphicon glyphicon-flash"
+							},
+							{
+								"id": "2",
+								"text": "Child node 2",
+								"state": {
+//									"disabled": true
+								}
+							}
+						]
+					}
+				]
+			}
+		});
+		$('#jstree').bind(
+			"select_node.jstree", function (evt, data) {
+				//selected node object: data.inst.get_json()[0];
+				//selected node text: data.inst.get_json()[0].data
+				console.log(evt);
+				console.log(data.node);
+			}
+		);
+	});
+</script>
+
+<div id="jstree"></div>
+
+{{ material_form_edit }}
+{{ material_form_delete }}
+
+<div>
+	<a class="btn btn-primary btn-sm pull-right bs-modal-link {{ material_metadata_add }}" title="Add material" href="#">
+		Add
+	</a>
+</div>
+
+<div class="indent"></div>
+
+<div class="fa-table">
+	{{ content }}
+</div>
+

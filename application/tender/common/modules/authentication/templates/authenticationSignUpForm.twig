@@ -1,0 +1,81 @@
+<div class="d_t w_100 h_100">
+	<div class="d_tr ">
+		<div class="d_tc va_m">
+			<div class="col-md-4 col-md-offset-4">
+				<h3 class="text-capitalize">sign up</h3>
+				<form id="login-form" method="post" action="{{ sign_up_url }}" autocomplete="off">
+					<div class="form-group">
+						<div class="has-feedback {{ authentication_fake_validation_class }}">
+							<div class="form-control hide">{{ authentication_fake }}</div>
+							<span class="form-control-feedback glyphicon hide {{ authentication_fake_feedback_class }}"></span>
+							<div class="help-block">
+								<h4>{{ authentication_fake_validation }}</h4>
+							</div>
+						</div>
+					</div>
+					{#<div class="form-group">#}
+					{#<label class="text-capitalize" for="account_type_id">account type</label>#}
+					{#<div class="has-feedback {{ account_type_id_validation_class }}">#}
+					{#<select id="account_type_id" class="form-control" name="account_type_id">#}
+					{#<option value="">[ select ]</option>#}
+					{#{{ account_type_options }}#}
+					{#</select>#}
+					{#<span class="form-control-feedback glyphicon hidden {{ account_type_id_feedback_class }}"></span>#}
+					{#<div class="help-block">{{ account_type_id_validation }}</div>#}
+					{#</div>#}
+					{#</div>#}
+					<div class="form-group">
+						<label class="text-capitalize" for="account_name">name</label>
+						<div class="has-feedback {{ account_name_validation_class }}">
+							<input id="account_name" class="form-control" name="account_name" type="text" value="{{ account_name }}">
+							<span class="form-control-feedback glyphicon hidden {{ account_name_feedback_class }}"></span>
+							<div class="help-block">{{ account_name_validation }}</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="text-capitalize" for="authentication_email">email address</label>
+						<div class="has-feedback {{ authentication_email_validation_class }}">
+							<input id="authentication_email" class="form-control" name="authentication_email" type="text" value="{{ authentication_email }}" placeholder="Email">
+							<span class="form-control-feedback glyphicon {{ authentication_email_feedback_class }}"></span>
+							<div class="help-block">{{ authentication_email_validation }}</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="text-capitalize" for="authentication_password">password</label>
+						<div class="has-feedback {{ authentication_password_validation_class }}">
+							<input id="authentication_password" class="form-control" name="authentication_password" type="password" value="{{ authentication_password }}" placeholder="Password">
+							<span class="form-control-feedback glyphicon {{ authentication_password_feedback_class }}"></span>
+							<div class="help-block">{{ authentication_password_validation }}</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="text-capitalize" for="authentication_password_confirm">confirm password</label>
+						<div class="has-feedback {{ authentication_password_confirm_validation_class }}">
+							<input id="authentication_password_confirm" class="form-control" name="authentication_password_confirm" type="password" value="{{ authentication_password_confirm }}" placeholder="Confirm password">
+							<span class="form-control-feedback glyphicon {{ authentication_password_confirm_feedback_class }}"></span>
+							<div class="help-block">{{ authentication_password_confirm_validation }}</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<button class="btn btn-default pull-right text-capitalize" type="submit">sign up</button>
+					</div>
+				</form>
+				<div class="col-md-12 help-block"></div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="pull-left">
+							<a class="text-capitalize" href="{{ sign_in_url }}">sign in</a>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="pull-right">
+							<a class="text-capitalize" href="{{ reset_url }}">reset password</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,18 @@
+#progress_bar {
+	background-color: #808080;
+}
+
+#progress_bar_scale {
+	width: 0%;
+	background-color: #00f;
+	height: 24px;
+}
+
+#progress_bar_text {
+	color: #FFF;
+	height: 24px;
+	text-align: center;
+	font-size: 16px;
+	line-height: 24px;
+	margin-top: -24px;
+}

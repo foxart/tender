@@ -1,0 +1,67 @@
+{{ upload_file_form }}
+
+
+
+
+
+<div class="page-header">
+	<h1>
+		Import new geo DB
+	</h1>
+</div>
+
+{#<script type="text/javascript">#}
+	{#$(document).on('change', '#import-form #file_attachement', function () {#}
+		{#$('#import-form #imported_file').val($(this).prop('files')[0].name);#}
+	{#});#}
+
+	{#$(document).on('click', '#import-form #imported_file_upload', function () {#}
+		{#$('#import-form #file_attachement').trigger('click');#}
+	{#});#}
+{#</script>#}
+
+<div class="row">
+	<div  class="col-md-12 text-right">
+
+		<form id="import-form" action="#" method="post" enctype="multipart/form-data">
+			<div class="form-group">
+				<a class="btn btn-primary btn-sm pull-right bs-modal-link {{ upload_file_metadata }}" title="Upload file" href="#">Upload file</a>
+			</div>
+
+		</form>
+
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div id="container">
+			<br>
+			{{ content }}
+		</div>
+	</div>
+</div>
+
+{#<div class="row">#}
+	{#<div class="col-md-12">#}
+		{#<br>#}
+		{#<div class="d_t w_100 va_m">#}
+			{#<div class="d_tr">#}
+				{#<div class="d_tc w_50">#}
+					{#<div id="progress_bar">#}
+						{#<div id="progress_bar_scale"></div>#}
+						{#<div id="progress_bar_text"></div>#}
+					{#</div>#}
+				{#</div>#}
+			{#</div>#}
+		{#</div>#}
+		{#<br>#}
+		{#<div id="import_output">#}
+			{#output#}
+		{#</div>#}
+	{#</div>#}
+{#</div>#}
+
+
+
+

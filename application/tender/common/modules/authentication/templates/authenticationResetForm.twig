@@ -1,0 +1,39 @@
+<div class="d_t w_100 h_100">
+	<div class="d_tr">
+		<div class="d_tc va_m">
+			<div class="col-md-4 col-md-offset-4">
+				<h3 class="text-capitalize">password reset</h3>
+				<div class="help-block"></div>
+				<form id="login-form" method="post" action="{{ reset_url }}" autocomplete="off">
+					<div class="form-group">
+						<label class="text-capitalize" for="authentication_email">email address</label>
+						<div class="has-feedback {{ authentication_email_validation_class }}">
+							<input id="authentication_email" class="form-control" name="authentication_email" type="text" value="{{ authentication_email }}" placeholder="Email">
+							<span class="form-control-feedback glyphicon {{ authentication_email_feedback_class }}"></span>
+							<div class="help-block">{{ authentication_email_validation }}</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="form-group">
+							<button class="btn btn-default pull-right text-capitalize" type="submit">reset</button>
+						</div>
+					</div>
+				</form>
+				<div class="col-md-12 help-block"></div>
+				<div class="row">
+					<div class="col-md-6 ">
+						<div class="pull-left">
+							<a href="{{ sign_in_url }}" class="text-capitalize">sign in</a>
+						</div>
+					</div>
+					<div class="col-md-6 ">
+						<div class="pull-right">
+							<a href="{{ sign_up_url }}" class="text-capitalize">sign up</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,62 @@
+<div id="form-add-user" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form class="bs-modal form-horizontal" method="post" name="form-add-user">
+				<div class="modal-header">
+					<button type="button" class="cancel close">
+						<span>&times;</span>
+					</button>
+					<h3 class="modal-title">Add new user</h3>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label class="col-md-3 control-label" for="account_name_add">Name</label>
+								<div class="col-md-9 has-feedback">
+									<input id="account_name_add" class="form-control" name="account_name" type="text">
+									<span class="form-control-feedback"></span>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label for="account_type_id_add" class="col-md-3 control-label">
+									Type
+								</label>
+								<div class="col-md-9 has-feedback">
+									<select id="account_type_id_add" class="form-control" name="account_type_id">
+										<option value="" selected>[select]</option>
+										{{ account_type_options }}
+									</select>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group form-group-sm">
+								<label for="authentication_email_add" class="col-md-3 control-label">
+									Email
+								</label>
+								<div class="col-md-9 has-feedback">
+									<input id="authentication_email_add" name="authentication_email" type="text" class="form-control"/>
+									<span class="form-control-feedback"></span>
+									<div class="help-block"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button class="submit btn btn-primary" type="submit">Submit</button>
+					<a class="cancel btn btn-default">Close</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

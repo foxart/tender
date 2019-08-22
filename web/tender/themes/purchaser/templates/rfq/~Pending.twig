@@ -1,0 +1,150 @@
+<div class="row">
+	<div class="col-md-12">
+		<div>
+			<h2>Pending PR Items</h2>
+		</div>
+		<div class="o_h">
+			{{ content }}
+		</div>
+	</div>
+</div>
+<br>
+<form action="">
+	<div class="row">
+		<div class="col-sm-6 col-md-3">
+			<div class="form-group form-group-sm">
+				<label class="col-md-7 control-label" for="collective_ref_no">Material Group</label>
+				<div class="col-md-5 input-group">
+					<select id="account_type_id" class="form-control" name="account_type_id">
+						<option value=""></option>
+						<option value="1">12345</option>
+						<option value="2">23545</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-md-3">
+			<div class="form-group form-group-sm">
+				<label class="col-md-7 control-label" for="collective_ref_no">Purchase Group</label>
+				<div class="col-md-5 input-group">
+					<select id="account_type_id" class="form-control" name="account_type_id">
+						<option value=""></option>
+						<option value="1">K56</option>
+						<option value="2">E19</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-md-3">
+			<div class="form-group form-group-sm">
+				<label class="col-md-6 control-label" for="collective_ref_no">PR Ref No</label>
+				<div class="col-md-6 input-group">
+					<select id="account_type_id" class="form-control" name="account_type_id">
+						<option value=""></option>
+						<option value="1">1272835423345</option>
+						<option value="2">2354519348594</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-md-3">
+			<button type="button" class="btn btn-default text-capitalize">filter</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-6 col-md-3">
+			<div class="form-group form-group-sm">
+				<label class="col-md-7 control-label" for="collective_ref_no">Tracking No</label>
+				<div class="col-md-5 input-group">
+					<select id="account_type_id" class="form-control" name="account_type_id">
+						<option value=""></option>
+						<option value="1">CASTAN-SCP</option>
+						<option value="2">IT</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-md-3">
+			<div class="form-group form-group-sm">
+				<label class="col-md-7 control-label" for="collective_ref_no">Material Group</label>
+				<div class="col-md-5 input-group">
+					<select id="account_type_id" class="form-control" name="account_type_id">
+						<option value=""></option>
+						<option value="1">12345</option>
+						<option value="2">23545</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-md-3">
+			<button type="button" class="btn btn-default text-capitalize">Export to Excel</button>
+			<br><br>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="fa-table ta_c">
+				<table>
+					<thead class="ta_c">
+					<tr class="text-capitalize">
+						<th>select all</th>
+						<th>Company Code</th>
+						<th>PR Ref No</th>
+						<th>PR Item No</th>
+						<th>Material No</th>
+						<th>Material Desc</th>
+						<th>Release Date</th>
+						<th>PR Date</th>
+						<th>Pending For</th>
+						<th>Material Group</th>
+						<th>Tracking No</th>
+						<th>Purchase Group</th>
+						<th>Quantity</th>
+						<th>Quantity In Published RFQ</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>1</td>
+						<td>ABCD</td>
+						<td>30384640458</td>
+						<td>1</td>
+						<td>HG1234677</td>
+						<td>SHAFT</td>
+						<td>01.01.2016</td>
+						<td>01.01.2016</td>
+						<td>184</td>
+						<td>12345</td>
+						<td>CASTAN-SCP</td>
+						<td>K61</td>
+						<td>50</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>ABCD</td>
+						<td>30384640458</td>
+						<td>1</td>
+						<td>HG1234678</td>
+						<td>SHAFT1</td>
+						<td>01.01.2016</td>
+						<td>01.01.2016</td>
+						<td>184</td>
+						<td>12345</td>
+						<td>CASTAN-SCP</td>
+						<td>K61</td>
+						<td>50</td>
+						<td>0</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<br>
+			<a href="/rfq/create" type="button" class="btn btn-default text-capitalize">create RFQ</a>
+		</div>
+	</div>
+</form>

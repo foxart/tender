@@ -1,0 +1,64 @@
+/*
+ * TABLE
+ */
+.fa-table table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #dddddd;
+}
+
+.fa-table thead th {
+	padding: 6px 12px;
+	/*border-right: 1px solid #dddddd;*/
+	border: 1px solid #cccccc;
+	background-color: #dddddd;
+}
+
+.fa-table thead th:last-child {
+	border-right-style: none;
+}
+
+.fa-table tbody tr.even {
+	/*background-color: lightgrey;*/
+	background-color: #ffffff;
+}
+
+.fa-table tbody tr.odd {
+	background-color: #f9f9f9;
+}
+
+.fa-table tbody td {
+	padding: 6px 12px;
+	border: 1px solid #dddddd;
+}
+
+.fa-table tbody tr:hover {
+}
+
+/*
+ * FILTER
+ */
+
+.fa-table .fa_filter_item, .fa-table .fa_filter_item_active {
+	display: inline-block;
+	margin: 0;
+	padding: 3px 3px;
+	border: solid 1px #b23f3f;
+	border-radius: 3px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #ffffff;
+	/*background-color: #B23F3F;*/
+}
+
+.fa-table .fa_filter_item_active {
+	color: #B23F3F;
+	background-color: #ffffff;
+}
+
+.fa-table .fa_filter_item:hover {
+	color: #B23F3F;
+	/*background-color: #E8C5C5;*/
+	background-color: #f9f9f9;
+
+}

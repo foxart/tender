@@ -1,0 +1,38 @@
+<div class="bs-form {{ account_filter_metadata }}">
+	<form class="form-horizontal" name="material-list-filter-form" method="get">
+		<div class="col-md-4">
+			<div class="form-group form-group-sm">
+				<label class="col-md-4 control-label" for="account_name_filter">
+					Name:
+				</label>
+				<div class="col-md-8">
+					<input id="account_name_filter" class="form-control" name="account_name_filter" type="text">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="form-group form-group-sm">
+				<label class="col-md-2 control-label" for="account_type_id_filter">
+					Type:
+				</label>
+				<div class="col-md-10">
+					<select id="account_type_id_filter" name="account_type_id_filter" class="form-control">
+						<option label="All" value="">All</option>
+						{{ user_group }}
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="form-group form-group-sm">
+				<div class="col-md-12">
+					<button class="btn btn-default btn-block btn-sm" title="Filter" type="submit">
+						Filter
+					</button>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+

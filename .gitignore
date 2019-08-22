@@ -1,0 +1,26 @@
+# windows thumbnail cache
+Thumbs.db
+
+# Mac DS_Store Files
+.DS_Store
+
+# phpstorm project files
+.idea
+
+# composer vendor dir
+vendor/*
+!vendor/fa/
+!vendor/vtiger/
+
+# composer itself is not needed
+composer.lock
+composer.phar
+
+# phpunit itself is not needed
+phpunit.phar
+
+# local phpunit config
+/phpunit.xml
+
+# local git crash file
+sh.exe.stackdump

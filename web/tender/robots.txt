@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /default/*
+Sitemap: http://tender.foxart.org/sitemap.xml
